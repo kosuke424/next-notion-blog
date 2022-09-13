@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import { siteConfig } from "../site.config";
 import { fetchPages } from "../utils/notion";
 import { sampleCards } from "../utils/sample";
-
+ 
 export const getStaticProps: GetStaticProps = async () => {
   const { results } = await fetchPages();
   return {
@@ -20,8 +20,9 @@ export const getStaticProps: GetStaticProps = async () => {
  
 const Home: NextPage = ({ pages }) => {
   console.log(pages);
-  return <Layout>
-    <div className="pt-12">
+  return (
+    <Layout>
+      <div className="pt-12">
         <h1 className="text-5xl mb-8">{siteConfig.title}</h1>
         <div className="grid md:gap-6 mt-10 md:grid-cols-2 w-full my-12">
           {/* Card */}
@@ -30,7 +31,8 @@ const Home: NextPage = ({ pages }) => {
           ))}
         </div>
       </div>
-  </Layout>;
+    </Layout>
+  );
 };
  
 export default Home;

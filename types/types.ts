@@ -8,12 +8,12 @@ export type LayoutProps = {
 
 export type PageProps = {
     slug: string;
-        name: string;
-        author: string;
-        cover: string;
-        published: string;
-        tags: string[];
-        content: string;
+    name: string;
+    author: string;
+    cover: string;
+    published: string;
+    tags: string[];
+    content: string;
 };
 
 export type CardProps = { page: PageType };
@@ -25,10 +25,13 @@ export type ArticleMetaProps = CardProps;
 
 export type IndexProps = { pages: PageType[] };
 
+export type TagProps = IndexProps & { tag: string };
+
 export type BlockProps = { block: BlockType };
 
 export type Params = ParsedUrlQuery & {
-    slug: string;
+    slug?: string;
+    tag?: string;
 };
 
 export type FileType = {

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { siteConfig } from "../site.config";
+import Breadcrumb from './Breadcrumb';
 
 function Navbar() {
   return (
@@ -14,6 +15,7 @@ function Navbar() {
                 <a className="text-gray-500 hover:text-gray-600">{siteConfig.title}</a>
             </Link>
             {/* Breadcrumb */}
+            <Breadcrumb />
             </div>
         </div>
         </nav>

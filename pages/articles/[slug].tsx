@@ -10,19 +10,19 @@ import { sampleCards } from '../../utils/sample';
 import NotionBlocks from "notion-block-renderer";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const { results } = await fetchPages({});
-    const paths = results.map((page: any) => {
-      return {
-        params: {
-          slug: getText(page.properties.slug.rich_text),
-        },
-      };
-    });
+  const { results } = await fetchPages({});
+  const paths = results.map((page: any) => {
     return {
-      paths: paths,
-      fallback: "blocking",
+      params: {
+        slug: getText(page.properties.slug.rich_text),
+      },
     };
+  });
+  return {
+    paths: paths,
+    fallback: "blocking",
   };
+};
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
     const { slug } = ctx.params as Params;

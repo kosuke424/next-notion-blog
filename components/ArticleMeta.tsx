@@ -29,10 +29,10 @@ const ArticleMeta: FC<ArticleMetaProps> = ({ page }) => {
           </div>
  
           {/* author */}
-          <div className="col-span-1">Author</div>
+          {/* <div className="col-span-1">Author</div>
           <div className="col-span-2">
             {getText(page.properties.author.rich_text)}
-          </div>
+          </div> */}
  
           {/* tags */}
           <div className="col-span-1">Tags</div>

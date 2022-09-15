@@ -2318,6 +2318,11 @@
   dependencies:
     "is-number" "^7.0.0"
 
+"tocbot@^4.18.2":
+  "integrity" "sha512-bWUfEYQZ4oFgT+qZYvzlTgbsTmA645ApHbo1iRaOBUeFfy5IpctgAQQjCXbPZy+4RDZ1JJYlIBgoApZMzMaYog=="
+  "resolved" "https://registry.npmjs.org/tocbot/-/tocbot-4.18.2.tgz"
+  "version" "4.18.2"
+
 "tr46@~0.0.3":
   "integrity" "sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw=="
   "resolved" "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz"

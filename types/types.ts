@@ -24,10 +24,15 @@ export type ArticleProps = {
 };
 export type ArticleMetaProps = CardProps;
 
-export type IndexProps = { pages: PageType[] };
+// export type IndexProps = { pages: PageType[] };
+export type IndexProps = { pages: PageType[] } & PagenationProps;
 
 export type TagProps = IndexProps & { tag: string };
 export type CategoryProps = IndexProps & { category: string };
+export type totalCountProps = IndexProps & { totalCount: number };
+export type PagenationProps = {pagenation: []} & { currentPage: number};
+export type PagenumberProps = IndexProps & { posts: PageType[] } & PagenationProps;
+
 
 export type BlockProps = { block: BlockType };
 
@@ -35,6 +40,7 @@ export type Params = ParsedUrlQuery & {
     slug?: string;
     tag?: string;
     category?: string;
+    page?: string;
 };
 
 export type FileType = {

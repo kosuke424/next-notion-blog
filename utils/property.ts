@@ -1,4 +1,5 @@
 import { PageType, RichTextType } from "../types/types";
+import { siteConfig } from "../site.config";
  
 export const getText = (richTextArr: RichTextType[]) => {
   try {

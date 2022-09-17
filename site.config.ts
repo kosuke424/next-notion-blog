@@ -3,4 +3,5 @@ export const siteConfig = {
     twitterUrl: "https://twitter.com/mrck77760862",
     instagramUrl: "",
     githubUrl: "https://github.com/kosuke424",
+    categories: ["web3", "programming", "NFT", "metaverse", "DAO"]
 }

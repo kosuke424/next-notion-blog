@@ -24,6 +24,15 @@ export const getDate = (date: { start: string }) => {
   }
   return "-";
 };
+
+export const getSelect = (select: { name: string }) => {
+  try {
+    return select.name;
+  } catch (err) {
+    // console.error(err)
+  }
+  return [];
+};
  
 export const getMultiSelect = (multiSelect: [{ name: string }]) => {
   try {

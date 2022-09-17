@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { CardProps } from "../types/types";
-import { getCover, getDate, getMultiSelect, getText } from "../utils/property";
+import { getCover, getDate, getMultiSelect, getSelect, getText } from "../utils/property";
 
 const Card: FC<CardProps> = ({ page }) => {
   return (
@@ -31,6 +31,9 @@ const Card: FC<CardProps> = ({ page }) => {
             </h2>
             <p className="text-gray-700 text-xs">
               {getDate(page.properties.published.date)}
+            </p>
+            <p className="text-gray-700 text-xs">
+              {getSelect(page.properties.categories.select)}
             </p>
           </div>
  

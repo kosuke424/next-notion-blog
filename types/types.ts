@@ -14,6 +14,7 @@ export type PageProps = {
     published: string;
     tags: string[];
     content: string;
+    categories: string;
 };
 
 export type CardProps = { page: PageType };
@@ -26,12 +27,14 @@ export type ArticleMetaProps = CardProps;
 export type IndexProps = { pages: PageType[] };
 
 export type TagProps = IndexProps & { tag: string };
+export type CategoryProps = IndexProps & { category: string };
 
 export type BlockProps = { block: BlockType };
 
 export type Params = ParsedUrlQuery & {
     slug?: string;
     tag?: string;
+    category?: string;
 };
 
 export type FileType = {
@@ -61,6 +64,7 @@ export type FileType = {
     published: { date: { start: string } };
     isPublic: { checkbox: boolean };
     tags: { multi_select: [{ name: string }] };
+    categories: { select: { name: string } };
   };
    
   export type PageType = {

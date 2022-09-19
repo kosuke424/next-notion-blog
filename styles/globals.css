@@ -1,6 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .snap {
+    scroll-snap-type: y mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+  .nav-transform {
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .pagination-transition {
+    transition: transform 0.2s;
+  }
+  .pagination-active {
+    transform: scale(1.8);
+  }
+}
+
 h1 {
   @apply font-semibold leading-tight text-4xl mt-0 mb-2;
 }

@@ -21,8 +21,8 @@ function Navbar () {
         </ul>
         <ul className="hidden md:flex md:flex-row">
           {[
+            ['ポートフォリオ', '/portforio'],
             ['お問い合わせ', '/query'],
-            ['works', '/works'],
           ].map(([title, url]) => (
             <Link href={url}>
               <li>

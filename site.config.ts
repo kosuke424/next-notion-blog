@@ -5,4 +5,5 @@ export const siteConfig = {
     githubUrl: "https://github.com/kosuke424",
     categories: ["web3", "programming", "NFT", "metaverse", "DAO"],
     per_page: 10,
+    portfotioNav: ["トップ", "このサイトについて", "ポートフォリオ", "連絡先", "ブログ"],
 }

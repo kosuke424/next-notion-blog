@@ -1,12 +1,10 @@
 import React from 'react'
-import P_navbar from '../components/portforio/P_navbar'
-import P_works from '../components/portforio/P_works'
+import P_layout from '../components/portforio/P_layout'
 
 const portforio = () => {
   return (
     <div>
-      <P_navbar />
-      <P_works />
+      <P_layout />
     </div>
   )
 }

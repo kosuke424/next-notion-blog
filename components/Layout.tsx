@@ -15,7 +15,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <div className="flex">
           <main className="w-full pb-12 px-4">{children}</main>
           {/*  */}
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
         {/*  */}
         <Footer />

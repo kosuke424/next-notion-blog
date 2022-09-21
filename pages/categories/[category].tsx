@@ -3,14 +3,14 @@ import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import { Params, CategoryProps } from "../../types/types";
 import { fetchPages } from "../../utils/notion";
-import { getText } from "../../utils/property";
+import { getSelect } from "../../utils/property";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { results } = await fetchPages({});
   const paths = results.map((page: any) => {
     return {
       params: {
-        category: getText(page.properties.categories.rich_text),
+        category: getSelect(page.properties.categories.select),
       },
     };
   });

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import { LayoutProps } from "../types/types";
 import Navbar from './Navbar'
 import Footer from './Footer'

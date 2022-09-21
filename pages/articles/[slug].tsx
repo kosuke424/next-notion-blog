@@ -47,6 +47,7 @@ const Article: NextPage<ArticleProps> = ({ page, blocks }) => {
       tocSelector: '.toc',
       contentSelector: 'article',
       headingSelector: 'h2, h3',
+
     })
 
     return () => tocbot.destroy()

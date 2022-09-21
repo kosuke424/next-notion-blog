@@ -11,10 +11,10 @@ function Navbar () {
             <a className="text-gray-500 hover:text-gray-600 text-2xl">{siteConfig.title}</a>
         </Link>
         <ul className="hidden md:flex md:flex-row">
-            {siteConfig.categories.map((menu) => (
-            <Link href={`/categories/${menu}`}>
+            {siteConfig.categories.map((menu, index) => (
+            <Link key={index} href={`/categories/${menu}`}>
               <li>
-                <a className="block rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">{menu}</a>
+                <a className="block rounded-lg px-3 py-2 text-slate-700 font-medium cursor-pointer hover:bg-slate-100">{menu}</a>
               </li>
             </Link>
           ))}
@@ -22,11 +22,11 @@ function Navbar () {
         <ul className="hidden md:flex md:flex-row">
           {[
             ['ポートフォリオ', '/portforio'],
-            ['お問い合わせ', '/query'],
-          ].map(([title, url]) => (
-            <Link href={url}>
+            ['お問い合わせ', '/contact'],
+          ].map(([title, url, index]) => (
+            <Link key={index} href={url}>
               <li>
-                <a className="block rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">{title}</a>
+                <a className="block rounded-lg px-3 py-2 text-slate-700 font-medium cursor-pointer hover:text-slate-900">{title}</a>
               </li>
             </Link>
           ))}

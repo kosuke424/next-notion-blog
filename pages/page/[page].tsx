@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import { Pagination } from "../../components/Pagenation";
-import { IndexProps, PagenumberProps, Params, totalCountProps } from "../../types/types";
+import { IndexProps,  Params } from "../../types/types";
 import { fetchPages } from "../../utils/notion";
 import { siteConfig } from "../../site.config";
 

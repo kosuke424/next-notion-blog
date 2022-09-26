@@ -2,6 +2,9 @@ import Link from 'next/link'
 import React, { FC } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { siteConfig } from '../../site.config'
+import P_profile from './P_profile'
+import P_top from './P_top'
+import P_works from './P_works'
 
 // import ClassNames from "classnames"
 
@@ -38,9 +41,9 @@ const P_layout:FC = () => {
         <section
             ref={ref1}
             id="section1"
-            className=""
+            className="snap-start"
         >
-            <div className="w-full h-screen snap-start justify-center text-white">
+            <div className="w-full h-screen snap-start">
                 <nav className="relative w-full flex flex-wrap items-center justify-between py-4  text-gray-500 hover:text-gray-700 focus:text-gray-700 navbar navbar-expand-lg navbar-light w-screen">
                     <div className="container-fluid w-full flex flex-wrap items-center justify-center px-12">
                         <ul className="hidden md:flex md:flex-row">
@@ -56,24 +59,22 @@ const P_layout:FC = () => {
                         </ul>
                     </div>
                 </nav>
-                <div className="w-full h-full flex justify-center items-center bg-blue-500 text-5xl text-white">
-                    Section1
-                </div>
+                <P_top />
             </div>
         </section>
         <section
             ref={ref2}
             id="section2"
-            className="w-full h-screen snap-start flex justify-center items-center bg-yellow-500 text-5xl text-white"
+            className="snap-start"
         >
-            Section2
+            <P_profile />
         </section>
         <section
             ref={ref3}
             id="section3"
-            className="w-full h-screen snap-start flex justify-center items-center bg-green-500 text-5xl text-white"
+            className="w-full h-screen snap-start"
         >
-            Section3
+            <P_works />
         </section>
 
         <nav id="pagination" className="fixed top-1/2 right-8 nav-transform">

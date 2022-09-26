@@ -81,3 +81,9 @@ export type FileType = {
 //     heading_2: { rich_text: RichTextType[] };
 //     paragraph: { rich_text: RichTextType[] };
 //   };
+
+// portforio
+export type ModalProps = {
+  show: boolean,
+  close: any
+}

@@ -12,8 +12,8 @@ const P_works = () => {
 
   return (
     <div>
-      <div className={`w-full h-screen bg-blue-100 text-white flex flex-col items-center ${modal && 'hidden'}`}>
-        <h2 className="text-5xl my-16 mx-auto">Works</h2>
+      <div className={`w-full h-screen flex flex-col items-center ${modal && 'hidden'}`}>
+        <h2 className="text-5xl mt-32 mb-16 mx-auto">Works</h2>
         <div className="grid md:gap-10 mt-10 md:grid-cols-3 my-12">
         {siteConfig.works.map((item, index) => (
           <button key={index} className="flex justify-center " onClick={() => {Toggle(); setTitle(item); setIndex(index);}}>

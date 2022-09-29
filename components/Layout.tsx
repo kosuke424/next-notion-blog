@@ -13,7 +13,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <Navbar />
         {/*  */}
         <div className="flex">
-          <main className="w-full pb-12 px-4">{children}</main>
+          <main className="max-w-3xl pb-12 px-4">{children}</main>
           {/*  */}
           {/* <Sidebar /> */}
         </div>

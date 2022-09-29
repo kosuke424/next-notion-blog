@@ -56,16 +56,16 @@ const Article: NextPage<ArticleProps> = ({ page, blocks }) => {
   return (
       <Layout>
         <article className="w-full">
-        {/* meta section */}
-        <div className="my-12">
-            <ArticleMeta page={page}/>
-        </div>
+          {/* meta section */}
+          <div className="my-12">
+              <ArticleMeta page={page}/>
+          </div>
 
-        {/* table of contents */}
-        <div className="font-semibold">Contents</div>
-        <nav className="toc" />
+          {/* table of contents */}
+          <div className="font-semibold">Contents</div>
+          <nav className="toc" />
 
-        {/* article */}
+          {/* article */}
           <div className="my-12">
             <NotionBlocks blocks={blocks} isCodeHighlighter={true} />
           </div>

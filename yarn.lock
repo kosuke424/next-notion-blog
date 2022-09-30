@@ -107,6 +107,23 @@
   "resolved" "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.1.4.tgz"
   "version" "1.1.4"
 
+"@splidejs/react-splide@^0.7.11":
+  "integrity" "sha512-+wbBwXBQrDunVJhpAgbyy6dUxxcbOUYApboMtaNx296MVUeWWDTN4EftT7ssNchzZMIF7m2wY8fqVAc/H/h7yA=="
+  "resolved" "https://registry.npmjs.org/@splidejs/react-splide/-/react-splide-0.7.11.tgz"
+  "version" "0.7.11"
+  dependencies:
+    "@splidejs/splide" "^4.1.1"
+
+"@splidejs/splide-extension-grid@^0.4.1":
+  "integrity" "sha512-XM3pl5VKvmoybwZRrv4xE8Hff2mT6Chl9GnGd8nQogo4ZtTgxzqAZqBxLvhrl5UuUswIdmNoRmMeeEgx9twrvw=="
+  "resolved" "https://registry.npmjs.org/@splidejs/splide-extension-grid/-/splide-extension-grid-0.4.1.tgz"
+  "version" "0.4.1"
+
+"@splidejs/splide@^4.1.1", "@splidejs/splide@^4.1.2":
+  "integrity" "sha512-7sv4Azb4hHJ8PGT2H/ilsElrxQ3+xrKwajBX/jkntjktrsqb3u3FXzo71dNPhwVr0hXVQUFgwvn0BjhwYzUJKw=="
+  "resolved" "https://registry.npmjs.org/@splidejs/splide/-/splide-4.1.2.tgz"
+  "version" "4.1.2"
+
 "@swc/helpers@0.4.11":
   "integrity" "sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw=="
   "resolved" "https://registry.npmjs.org/@swc/helpers/-/helpers-0.4.11.tgz"

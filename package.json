@@ -10,6 +10,9 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.11",
+    "@splidejs/splide": "^4.1.2",
+    "@splidejs/splide-extension-grid": "^0.4.1",
     "classnames": "^2.3.2",
     "gsap": "^3.11.2",
     "next": "12.3.0",

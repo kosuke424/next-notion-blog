@@ -96,17 +96,17 @@ const P_layout:FC = () => {
         <nav id="pagination" className="fixed top-1/2 right-8 nav-transform">
             <a
                 className={`block w-3 h-3 my-6 rounded-full bg-blue-300 pagination-transition ${inView1 ? 'pagination-active':''}`}
-                href="#section1"
+                href={`#${siteConfig.portfotioNav[0]}`}
                 onClick={e => smoothScroll(e)}
             />
             <a
                 className={`block w-3 h-3 my-6 rounded-full bg-blue-300 pagination-transition ${inView2 ? 'pagination-active':''}`}
-                href="#section2"
+                href={`#${siteConfig.portfotioNav[1]}`}
                 onClick={e => smoothScroll(e)}
             />
             <a
                 className={`block w-3 h-3 my-6 rounded-full bg-blue-300 pagination-transition ${inView3 ? 'pagination-active':''}`}
-                href="#section3"
+                href={`#${siteConfig.portfotioNav[2]}`}
                 onClick={e => smoothScroll(e)}
             />
         </nav>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const P_modal: FC<ModalProps> = ({ show, title, index, close }) => {
   return (
-    <div className="pt-16 lg:pt-48 lg:pb-24">
+      <div className="pt-16 lg:pt-48 lg:pb-24">
        {
        show ?
       <div className="px-4 py-24 relative bg-slate-50 shadow-md shadow-slate-500 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24">

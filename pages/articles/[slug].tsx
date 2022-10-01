@@ -4,9 +4,10 @@ import ArticleMeta from '../../components/ArticleMeta';
 import Layout from '../../components/Layout';
 import { ArticleProps, Params } from "../../types/types";
 import { fetchBlocksByPageId, fetchPages } from '../../utils/notion';
-import { getText } from '../../utils/property';
+import { getCheckbox, getCover, getText } from '../../utils/property';
 import NotionBlocks from "notion-block-renderer";
 import tocbot from 'tocbot';
+import { NextSeo } from 'next-seo';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { results } = await fetchPages({});
@@ -55,6 +56,23 @@ const Article: NextPage<ArticleProps> = ({ page, blocks }) => {
 
   return (
       <Layout>
+        <NextSeo
+          title={getText(page.properties.name.title)}
+          description={getText(page.properties.description.rich_text)}
+          noindex={getCheckbox(page.properties.noindex.checkbox)}
+          nofollow={getCheckbox(page.properties.nofollow.checkbox)}
+          openGraph={{
+            url: `/articles/${getText(page.properties.slug.rich_text)}`,
+            title: getText(page.properties.name.title),
+            description: getText(page.properties.description.rich_text),
+            images: [
+              {
+                url: getCover(page.cover),
+              },
+            ],
+          }}
+        />
+        
         <article className="w-full">
           {/* meta section */}
           <div className="my-12">

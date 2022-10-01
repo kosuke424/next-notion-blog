@@ -7,6 +7,7 @@ import { getCover, getDate, getMultiSelect, getText } from "../utils/property";
 const ArticleMeta: FC<ArticleMetaProps> = ({ page }) => {
   return (
     <>
+      
       {/* page cover */}
       <Image
         className="w-full max-w-screen-lg rounded-lg aspect-video my-4"

@@ -1,4 +1,4 @@
-import { PageType, RichTextType } from "../types/types";
+import { PageType, PropertyType, RichTextType } from "../types/types";
 import { siteConfig } from "../site.config";
  
 export const getText = (richTextArr: RichTextType[]) => {
@@ -44,3 +44,11 @@ export const getMultiSelect = (multiSelect: [{ name: string }]) => {
   return [];
 };
 
+export const getCheckbox = (checkbox: boolean) => {
+  try {
+    return checkbox;
+  } catch (err) {
+    // console.error(err)
+  }
+  return false;
+};

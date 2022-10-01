@@ -66,6 +66,9 @@ export type FileType = {
     isPublic: { checkbox: boolean };
     tags: { multi_select: [{ name: string }] };
     categories: { select: { name: string } };
+    description: { rich_text: RichTextType[] };
+    noindex: { checkbox: boolean };
+    nofollow: { checkbox: boolean };
   };
    
   export type PageType = {

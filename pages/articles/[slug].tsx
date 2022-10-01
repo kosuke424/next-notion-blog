@@ -1,12 +1,12 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import React, { useEffect } from 'react'
+import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import React, { useEffect, useLayoutEffect } from 'react'
 import ArticleMeta from '../../components/ArticleMeta';
 import Layout from '../../components/Layout';
 import { ArticleProps, Params } from "../../types/types";
 import { fetchBlocksByPageId, fetchPages } from '../../utils/notion';
 import { getCheckbox, getCover, getText } from '../../utils/property';
 import NotionBlocks from "notion-block-renderer";
-import tocbot from 'tocbot';
+// import tocbot from 'tocbot';
 import { NextSeo } from 'next-seo';
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -37,22 +37,13 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             page: page,
             blocks: blocks,
         },
-        revalidate: 10,
+        // revalidate: 10,
     };
 };
 
 const Article: NextPage<ArticleProps> = ({ page, blocks }) => {
 
-  useEffect(() => {
-    tocbot.init({
-      tocSelector: '.toc',
-      contentSelector: 'article',
-      headingSelector: 'h2, h3',
-
-    })
-
-    return () => tocbot.destroy()
-  }, [])
+  // console.log(blocks);
 
   return (
       <Layout>
@@ -80,8 +71,22 @@ const Article: NextPage<ArticleProps> = ({ page, blocks }) => {
           </div>
 
           {/* table of contents */}
+          {/* <div className="font-semibold">Contents</div>
+          <nav className="toc" /> */}
           <div className="font-semibold">Contents</div>
-          <nav className="toc" />
+          <ul className="toc">
+            {blocks.map((block, index) => {
+              if (block.type == 'heading_2') {
+                return (
+              <li key={index}>
+                <a href={`#${block.id}`}>
+                  {block.heading_2.rich_text[0].plain_text}
+                </a>
+              </li>
+              )
+              }            
+          })}
+          </ul>
 
           {/* article */}
           <div className="my-12">

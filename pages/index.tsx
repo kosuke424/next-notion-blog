@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import Card from "../components/Card";
 import Layout from "../components/Layout";
 import { IndexProps } from "../types/types";
@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
       pagenation: pagenation,
       currentPage: currentPage,
     },
-    revalidate: 10,
+    // revalidate: 10,
   };
 };
  

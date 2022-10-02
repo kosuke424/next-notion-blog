@@ -21,7 +21,7 @@ const ArticleMeta: FC<ArticleMetaProps> = ({ page }) => {
  
       {/* page name */}
       <h1 className="my-8">{getText(page.properties.name.title)}</h1>
-      <div className="bg-gray-100 px-6 py-4 rounded text-sm text-gray-500">
+      <div className="bg-slate-50 px-6 py-4 rounded text-sm text-gray-500 shadow">
         <div className="grid grid-cols-3 gap-4">
           {/* published */}
           <div className="col-span-1">Published</div>

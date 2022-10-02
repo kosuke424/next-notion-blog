@@ -72,7 +72,7 @@ function Footer() {
             {/* copyright */}
             <div className="text-center p-4 ">
               <Link href="/">
-                <a className="text-whitehite">© sample site</a>
+                <a className="text-whitehite">© {siteConfig.title}</a>
               </Link>
             </div>
           </div>

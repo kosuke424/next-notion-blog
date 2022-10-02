@@ -39,19 +39,19 @@ main {
 
 /* toc */
 .toc {
-  @apply py-4 px-8 border-y-2 border-y-cyan-700;
+  @apply py-4 px-12 rounded bg-slate-50 shadow;
 }
 
 .toc li {
-  @apply pb-0.5 list-decimal;
+  @apply pb-0.5 pl-2 list-decimal font-medium ;
 }
 
 /* notion block renderer */
 .nbr-block-h2 {
-  @apply border-b-4 border-b-cyan-700;
+  @apply border-b-4 border-b-indigo-800;
 }
 .nbr-block-h3 {
-  @apply border-l-4 border-l-cyan-700 pl-2;
+  @apply border-l-4 border-l-indigo-800 pl-2;
 }
 .nbr-inline-code {
   @apply text-pink-500 text-sm px-2 py-1 font-normal bg-gray-100 rounded break-words;

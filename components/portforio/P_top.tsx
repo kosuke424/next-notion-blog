@@ -13,10 +13,10 @@ const P_top = () => {
           // stagger: -0.1,
       })
 
-      gsap.set(".cursor", {
-          x: mouseX,
-          y: mouseY,
-        });
+      // gsap.set(".cursor", {
+      //     x: mouseX,
+      //     y: mouseY,
+      //   });
 
     });
   }
@@ -29,7 +29,7 @@ const P_top = () => {
       <div className="shape absolute bg-indigo-800 rounded-full w-72 h-72 my-36"></div>
       <div className="shape absolute bg-emerald-200 rounded-full w-48 h-48 my-24"></div>
       <div className="shape absolute bg-purple-700 rounded-full w-32 h-32 my-16"></div>
-      <h2 className="absolute top-0 left-0 text-7xl lg:text-9xl font-bold text-zinc-900 w-full h-screen overflow-hidden flex justify-center items-center bg-white mix-blend-screen">Creating value!<br/>value from Inovation</h2>
+      <h2 className="absolute top-0 left-0 text-7xl lg:text-9xl font-bold text-zinc-900 w-full h-screen overflow-hidden flex justify-center items-center bg-white mix-blend-screen">Done is better than perfect<br/>Creating value!</h2>
     </div>
 
     {/* <div className="content w-full h-96 flex justify-center items-center bg-white mix-blend-screen">

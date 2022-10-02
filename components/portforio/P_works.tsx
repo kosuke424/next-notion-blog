@@ -38,8 +38,8 @@ const P_works = () => {
           <h2 className="text-5xl mt-32 mb-16 mx-auto">Works</h2>
           <div className="grid md:gap-16 mt-10 md:grid-cols-3 my-12">
           {siteConfig.works.map((item, index) => (
-            <button key={index} className="flex justify-center " onClick={() => {Toggle(); setTitle(item); setIndex(index);}}>
-              <div className="rounded overflow-hidden bg-slate-50 shadow w-full my-4 relative transition hover:bottom-2 hover:right-2 hover:shadow-2xl  md:my-0 content-between grid md:gap-6" >
+            <button key={index} className="flex justify-center" onClick={() => {Toggle(); setTitle(item); setIndex(index);}}>
+              <div className="rounded overflow-hidden bg-slate-50 shadow w-full my-4 relative transition hover:bottom-2 hover:right-2 hover:shadow-2xl hover:bg-blue-300 hover:text-white md:my-0 content-between grid md:gap-6" >
                 <div className="flex flex-col">
                     <Image
                       className="w-full static w-full h-auto"
@@ -92,7 +92,7 @@ const P_works = () => {
             {siteConfig.works.map((item, index) => (          
               <SplideSlide key={index}>
                 <button className="flex justify-center" onClick={() => {Toggle(); setTitle(item); setIndex(index);}}>
-                  <div className="rounded overflow-hidden bg-slate-50 shadow w-full my-4 relative transition hover:bottom-2 hover:right-2 hover:shadow-2xl  md:my-0 content-between grid md:gap-6" >
+                  <div className="rounded overflow-hidden bg-slate-50 shadow w-full my-4 relative transition hover:bottom-2 hover:right-2 hover:shadow-2xl hover:bg-blue-300 hover:text-white md:my-0 content-between grid md:gap-6" >
                     <div className="flex flex-col">
                         <Image
                           className="w-full static w-full h-auto"

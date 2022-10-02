@@ -1,10 +1,10 @@
 export const siteConfig = {
-    title: "Web3 Blog",
+    title: "テクそら",
     twitterUrl: "https://twitter.com/mrck77760862",
     instagramUrl: "",
     githubUrl: "https://github.com/kosuke424",
-    categories: ["web3", "programming", "NFT", "metaverse", "DAO"],
+    categories: ["プログラミング初心者", "フロントエンド", "バックエンド", "web3", "投資"],
     per_page: 10,
     portfotioNav: ["Top", "Profile", "Works"],
-    works: ["Jamstackブログ", "Wordpressブログ", "SEOコンサル", "Webライティング代行", "Dapps", "自動売買システム"]
+    works: ["Jamstackブログ制作", "Wordpressブログ制作", "SEOコンサル", "Webライティング代行", "Dapps", "自動売買システム"]
 }

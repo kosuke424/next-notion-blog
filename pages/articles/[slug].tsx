@@ -73,8 +73,9 @@ const Article: NextPage<ArticleProps> = ({ page, blocks }) => {
           {/* table of contents */}
           {/* <div className="font-semibold">Contents</div>
           <nav className="toc" /> */}
-          <div className="font-semibold">Contents</div>
+          {/* <div className="font-semibold text-2xl text-indigo-800">Contents</div> */}
           <ul className="toc">
+           <div className="font-semibold mb-4 text-2xl text-indigo-800">Contents</div>
             {blocks.map((block, index) => {
               if (block.type == 'heading_2') {
                 return (

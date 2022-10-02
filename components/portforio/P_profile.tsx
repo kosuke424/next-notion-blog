@@ -15,18 +15,20 @@ const P_profile = () => {
                 <div className="flex">
                     <div>
                         <h3 className="mb-2 font-semibold leading-5 text-base md:text-2xl">
-                            自己紹介
+                            <span className="text-blue-300">自</span>己紹介
                         </h3>
                         <p className="text-sm text-gray-900">
-                        私の名前は丸々です。新しいもの好きでよく試します。最近だとHADOというARスポーツにハマっています。
-                        一度のめり込むとこだわり抜く職人気質だと自負しております。
+                        新しいもの好きな性格で色々やって試します。最近だと「HADO」というARスポーツにチャレンジしてみました。
+                        一度のめり込むとこだわり抜く職人気質でコツコツ積み上げていくのが得意です。
                         </p>
                         <hr className="w-full my-6 border-gray-300" />
                     </div>
                 </div>
                 <div className="flex">
                     <div>
-                        <h3 className="mb-2 font-semibold leading-5 text-base md:text-2xl">経歴</h3>
+                        <h3 className="mb-2 font-semibold leading-5 text-base md:text-2xl">
+                        <span className="text-blue-300">経</span>歴
+                        </h3>
                         <p className="text-sm text-gray-900">
                             2017~2019 自動車機器メーカーの組込みエンジニア<br/>
                             2020~ webライター/ブロガー<br/>
@@ -37,9 +39,19 @@ const P_profile = () => {
                 </div>
             </div>
             <div className="flex flex-col items-center mx-8">
-                <img className="object-cover w-56 lg:w-full h-36 lg:h-56 col-span-2 rounded shadow-lg" src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+                {/* <img className="object-cover w-56 lg:w-full h-36 lg:h-56 col-span-2 rounded shadow-lg" src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" /> */}
+                <div className="border-solid border-2 border-gray-300 rounded">
+                     <Image
+                        src="/profile.png"
+                        alt="プロフィール画像"
+                        objectFit="cover"
+                        width={280}
+                        height={280}
+                        quality={30}
+                    />
+                </div> 
                 <div className="text-center">
-                    <h3 className="lg:pt-4">Sushisuke</h3>
+                    <h3 className="lg:pt-4"><span className="text-blue-300">S</span>ushisuke</h3>
                 </div>
                 <div className="flex justify-center items-center mx-4 lg:my-2">
                     {siteConfig.twitterUrl && (
@@ -49,7 +61,7 @@ const P_profile = () => {
                             focusable="false"
                             data-prefix="fab"
                             data-icon="twitter"
-                            className="w-8 h-full mx-2"
+                            className="w-8 h-full mx-2 text-blue-300"
                             role="img"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
@@ -69,7 +81,7 @@ const P_profile = () => {
                             focusable="false"
                             data-prefix="fab"
                             data-icon="github"
-                            className="w-8 h-full mx-2"
+                            className="w-8 h-full mx-2 text-blue"
                             role="img"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 496 512"

@@ -15,35 +15,38 @@ const P_modal: FC<ModalProps> = ({ show, title, index, close }) => {
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                The quick, brown fox<br className="hidden md:block" />
-                jumps over
-                <span className="relative px-1">
-                  <div className="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"></div>
-                  <span className="relative inline-block text-deep-purple-accent-400">a lazy dog</span>
-                </span>
+                {title}
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+                静的サイトと動的サイトの良さを併せ持ったJamstackの構成でブログを制作しました。
+                本サイトはこの技術を使って作られています。
+                ページを事前に生成しておくことで表示速度が従来のブログより高速になり、ユーザーフレンドリーなサイトになります。
+                最近ではSEOで表示速度を重視するとGoogleから公式発表されているため、このようなサイトはGoogleへの評価も高くなり検索順位のアップが狙えます。
               </p>
             </div>
             <div className="grid gap-5 row-gap-8 sm:grid-cols-2">
-              <div className="bg-white border-l-4 shadow-sm border-deep-purple-accent-400">
+              <div className="bg-white border-l-2 shadow-sm border-blue-300">
                 <div className="h-full p-5 border border-l-0 rounded-r">
-                  <h3 className="mb-2 font-semibold leading-5">
-                    Ill be sure to note that in my log
+                  <h3 className="mb-4 font-semibold leading-5">
+                    Jamstackのメリット
                   </h3>
                   <p className="text-sm text-gray-900">
-                    Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down.
+                    ・表示速度の向上<br/>
+                    ・サーバ代がかからない<br/>
+                    ・セキュリティが高い<br/>
+                    ・スケーラビリティがある<br/>
                   </p>
                 </div>
               </div>
-              <div className="bg-white border-l-4 shadow-sm border-deep-purple-accent-400">
+              <div className="bg-white border-l-2 shadow-sm border-blue-300">
                 <div className="h-full p-5 border border-l-0 rounded-r">
-                  <h3 className="mb-2 font-semibold leading-5">
-                    A business big enough that it could be listed
+                  <h3 className="mb-4 font-semibold leading-5">
+                    誰に向いているか?
+                    
                   </h3>
                   <p className="text-sm text-gray-900">
-                    Those options are already baked in with this model shoot me an email clear.
+                    コンテンツ数がそれほど多くない個人ブログや小中規模のサイトに向いています。
+                    また動的なコンテンツが多い場合はあまり向いていません。
                   </p>
                 </div>
               </div>

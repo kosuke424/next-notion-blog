@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             pages: results ? results : [],
             tag: tag,
         },
-        // revalidate: 10,
+        revalidate: 1,
     };
 };
  

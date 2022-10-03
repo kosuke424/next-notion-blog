@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
       pagenation: pagenation,
       currentPage: currentPage,
     },
-    // revalidate: 10,
+    revalidate: 10,
   };
 };
  

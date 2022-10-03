@@ -4,7 +4,7 @@ export default {
     openGraph: {
       type: 'website',
       locale: 'ja_JP',
-      url: 'https://localhost:3000/',
+      url: 'https://tech-sora.vercel.app/',
       site_name: 'テクそら',
     },
     twitter: {

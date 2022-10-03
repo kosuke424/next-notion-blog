@@ -8,8 +8,8 @@ function Navbar () {
   const Toggle = () => setIsopen(!isOpen);
 
   return (
-    <nav className={`relative w-full flex flex-wrap items-center justify-between py-6 text-gray-500 hover:text-gray-700 focus:text-gray-700 navbar navbar-expand-lg navbar-light w-screen ${isOpen && ''}`}>
-      <div className={`container-fluid w-full flex flex-wrap items-center justify-between px-24 ${isOpen && 'px-56'}`}>
+    <nav className={`w-full flex flex-wrap items-center justify-between py-6 text-gray-500 hover:text-gray-700 focus:text-gray-700 w-screen ${isOpen && 'fixed z-20 bg-slate-50 shadow-2xl'}`}>
+      <div className="w-full flex flex-wrap items-center lg:justify-between pl-8 lg:pl-36 pr-36">
         <Link href="/">
             <a className={`text-blue-300 font-semibold hover:text-blue-700 text-2xl ${isOpen && 'hidden'}`}>{siteConfig.title}</a>
         </Link>
@@ -30,10 +30,10 @@ function Navbar () {
             </Link>
           ))}
         </div>
-        <div className="block fixed top-6 right-20 h-30 cursor-pointer lg:hidden" onClick={() => {Toggle(); console.log(isOpen)}}>
-          <span className={`absolute block bg-slate-500 right-0 top-0 w-12 h-1.5 rounded ${isOpen && 'rotate-45 top-8'}`}></span>
-          <span className={`absolute block bg-slate-500 right-0 top-4 w-12 h-1.5 rounded ${isOpen && 'hidden'}`}></span>
-          <span className={`absolute block bg-slate-500 right-0 top-8 w-12 h-1.5 rounded ${isOpen && 'rotate-[135deg] top-4'}`}></span>
+        <div className="fixed top-2 right-4 lg:right-20 z-30 w-14 h-14 bg-slate-400 cursor-pointer rounded lg:hidden" onClick={() => {Toggle()}}>
+          <span className={`absolute block bg-white right-1 top-3 w-12 h-1 rounded ${isOpen && 'hidden'}`}></span>
+          <span className={`absolute block bg-white right-1 top-7 w-12 h-1 rounded ${isOpen && 'rotate-45'}`}></span>
+          <span className={`absolute block bg-white right-1 top-11 w-12 h-1 rounded ${isOpen && 'hidden'}`}></span>
         </div>
         <div
           className="flex bg-grey-light rounded-md w-full"

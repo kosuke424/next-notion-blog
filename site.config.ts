@@ -1,6 +1,6 @@
 export const siteConfig = {
     title: "テクそら",
-    twitterUrl: "https://twitter.com/mrck77760862",
+    twitterUrl: "https://twitter.com/su_shi_suke",
     instagramUrl: "",
     githubUrl: "https://github.com/kosuke424",
     categories: ["プログラミング初心者", "フロントエンド", "バックエンド", "web3", "投資"],

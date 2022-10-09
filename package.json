@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -33,6 +34,7 @@
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
     "eslint-config-next": "12.3.0",
+    "next-sitemap": "^3.1.24",
     "patch-package": "^6.4.7",
     "postcss": "^8.4.16",
     "react-scroll": "^1.8.7",

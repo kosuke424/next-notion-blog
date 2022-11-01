@@ -18,9 +18,16 @@ export type PageProps = {
 };
 
 export type CardProps = { page: PageType };
+export type FallbackPage = {
+  [key: string]: PageType
+}
+export type ArticleParts = {
+  page: PageType;
+  blocks: BlockType[];
+}
 export type ArticleProps = {
-    page: PageType;
-    blocks: BlockType[];
+  slug: string
+  fallback: ArticleParts;
 };
 export type ArticleMetaProps = CardProps;
 
@@ -39,7 +46,8 @@ export type Params = ParsedUrlQuery & {
 };
 
 export type FileType = {
-    file?: { url: string };
+    type?: string
+    file?: { url: string,  expiry_time: string};
     external?: { url: string };
   };
    

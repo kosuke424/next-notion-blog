@@ -1,4 +1,6 @@
 import { Client } from "@notionhq/client";
+import { PageType } from "../types/types";
+import axios from 'axios'
 
 const notion = new Client({ auth: process.env.NOTION_KEY as string });
 const DATABASE_ID = process.env.NOTION_DATABASE_ID as string;
@@ -82,3 +84,68 @@ export const fetchBlocksByPageId = async (pageId: string) => {
     }
     return { results: data };
 }
+export const reFetchPage = async (slug: string): Promise<PageType> => {
+    try {
+      const { data: page } = await axios.get(`/api/page?slug=${slug}`)
+      return page as PageType
+    } catch (error) {
+      console.log("fetechPage")
+      console.log(error)
+      return {} as PageType
+    }
+  }
+
+  export const reFetchPages = async (): Promise<PageType[]> => {
+    try {
+      const { data: pages } = await axios.get("/api/pages")
+      console.log("reFetchPages no problem!")
+      console.log(pages)
+      return pages as PageType[]
+    } catch (error) {
+      console.log("reFetechPages error!")
+      console.log(error)
+      return [] as PageType[]
+    }
+  }
+
+  export const includeExpiredFeaturedImages = (pages: PageType[]): boolean => {
+    const now = Date.now()
+    console.log("アイキャッチ画像の有効期限チェック！")
+    pages.map((page) => {
+        if (page.cover) {
+            if (page.cover.type === 'file') {
+                const image = page.cover
+                if(image.file) {
+                    console.log(image.file.expiry_time);
+                }            
+                if (image.file && image.file.expiry_time && Date.parse(image.file.expiry_time) < now) {
+                    console.log("有効期限切れ アイキャッチ画像更新！")
+                    return true
+                }
+            }
+        }
+    })
+    // TODO: looking for the image block in Children recursively
+    console.log("アイキャッチ期限切れなし！")
+    return false
+  }
+
+export const includeExpiredFeaturedImage = (page: PageType): boolean => {
+    const now = Date.now()
+    console.log("アイキャッチ画像の有効期限チェック！")
+    if (page.cover) {
+        if (page.cover.type === 'file') {
+            const image = page.cover
+            if(image.file) {
+                console.log(image.file.expiry_time);
+            }            
+            if (image.file && image.file.expiry_time && Date.parse(image.file.expiry_time) < now) {
+                console.log("有効期限切れ アイキャッチ画像更新！")
+                return true
+            }
+        }
+    }
+    // TODO: looking for the image block in Children recursively
+    console.log("期限切れなし！")
+    return false
+  }

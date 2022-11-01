@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { CardProps } from "../types/types";
@@ -14,7 +14,14 @@ const Card: FC<CardProps> = ({ page }) => {
             {/* image */}
             <div>
               {" "}
-              <Image
+              <img
+                className="static w-full h-auto"
+                src={getCover(page.cover)}
+                alt=""
+                width={400}
+                height={225}
+              />
+              {/* <Image
                 className="static w-full h-auto"
                 src={getCover(page.cover)}
                 alt=""
@@ -22,7 +29,7 @@ const Card: FC<CardProps> = ({ page }) => {
                 width={400}
                 height={225}
                 quality={30}
-              />
+              /> */}
             </div>
   
             {/* title & date*/}

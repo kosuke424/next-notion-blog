@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
 import { ArticleMetaProps } from "../types/types";
@@ -9,7 +9,14 @@ const ArticleMeta: FC<ArticleMetaProps> = ({ page }) => {
     <>
       
       {/* page cover */}
-      <Image
+      <img
+        className="w-full max-w-screen-lg rounded-lg aspect-video my-4"
+        src={getCover(page.cover)}
+        alt=""
+        width={640}
+        height={360}
+      />
+      {/* <Image
         className="w-full max-w-screen-lg rounded-lg aspect-video my-4"
         src={getCover(page.cover)}
         alt=""
@@ -17,7 +24,7 @@ const ArticleMeta: FC<ArticleMetaProps> = ({ page }) => {
         width={640}
         height={360}
         quality={50}
-      />
+      /> */}
  
       {/* page name */}
       <h1 className="my-8">{getText(page.properties.name.title)}</h1>

@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
             pagenation: pagenation,
             currentPage: currentPage,
         },
-        revalidate: 1,
+        revalidate: 60,
     };
 };
 

@@ -98,7 +98,8 @@ const Article: NextPage<ArticleProps> = ({ slug, fallback }) => {
           />
         }
         
-        <article className="w-full">
+        {/* <article className="w-full"> */}
+        <article className="max-w-full">
           {/* meta section */}
           <div className="my-12">
             {articleParts &&

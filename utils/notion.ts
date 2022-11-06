@@ -98,8 +98,6 @@ export const reFetchPage = async (slug: string): Promise<PageType> => {
   export const reFetchPages = async (): Promise<PageType[]> => {
     try {
       const { data: pages } = await axios.get("/api/pages")
-      console.log("reFetchPages no problem!")
-      console.log(pages)
       return pages as PageType[]
     } catch (error) {
       console.log("reFetechPages error!")

@@ -70,7 +70,7 @@ const includeExpiredImage = (fallback: ArticleParts): boolean => {
         return true
       }
     }
-    // TODO: looking for the image block in Children recursively
+    return false
   })
 }
 const Article: NextPage<ArticleProps> = ({ slug, fallback }) => {

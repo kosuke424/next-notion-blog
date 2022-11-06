@@ -111,7 +111,7 @@ export const reFetchPage = async (slug: string): Promise<PageType> => {
   export const includeExpiredFeaturedImages = (pages: PageType[]): boolean => {
     const now = Date.now()
     console.log("アイキャッチ画像の有効期限チェック！")
-    pages.map((page) => {
+    return pages.some((page) => {
         if (page.cover) {
             if (page.cover.type === 'file') {
                 const image = page.cover
@@ -124,28 +124,6 @@ export const reFetchPage = async (slug: string): Promise<PageType> => {
                 }
             }
         }
+        return false
     })
-    // TODO: looking for the image block in Children recursively
-    console.log("アイキャッチ期限切れなし！")
-    return false
-  }
-
-export const includeExpiredFeaturedImage = (page: PageType): boolean => {
-    const now = Date.now()
-    console.log("アイキャッチ画像の有効期限チェック！")
-    if (page.cover) {
-        if (page.cover.type === 'file') {
-            const image = page.cover
-            if(image.file) {
-                console.log(image.file.expiry_time);
-            }            
-            if (image.file && image.file.expiry_time && Date.parse(image.file.expiry_time) < now) {
-                console.log("有効期限切れ アイキャッチ画像更新！")
-                return true
-            }
-        }
-    }
-    // TODO: looking for the image block in Children recursively
-    console.log("期限切れなし！")
-    return false
   }

@@ -40,7 +40,7 @@ const P_profile = () => {
             </div>
             <div className="flex flex-col items-center mx-8">
                 {/* <img className="object-cover w-56 lg:w-full h-36 lg:h-56 col-span-2 rounded shadow-lg" src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" /> */}
-                <div className="border-solid border-2 border-gray-300 rounded">
+                <div className="border-solid border-2 border-gray-300 rounded hidden sm:block">
                      <Image
                         src="/profile.png"
                         alt="プロフィール画像"

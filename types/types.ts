@@ -96,7 +96,6 @@ export type FileType = {
 // portforio
 export type ModalProps = {
   show: boolean,
-  title: string,
   index: number,
   close: any
 }

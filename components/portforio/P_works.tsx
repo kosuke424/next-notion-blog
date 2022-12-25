@@ -35,9 +35,9 @@ const P_works = () => {
     return (
       <div>
         <div className={`w-full h-screen overflow-hidden flex flex-col items-center ${modal && 'hidden'}`}>
-          <h2 className="text-4xl mt-32 mb-12 mx-auto">Works & Services</h2>
-          <p className="text-xl">私のこれまでの制作物とその経験に裏付けされたサービスを紹介します。</p>
-          <div className="grid md:gap-16 mt-10 md:grid-cols-3 my-12">
+          <h2 className="text-4xl mt-20 mb-2 mx-auto">Works & Services</h2>
+          <p className="text-xl">各種Webサービスにおける課題解決をお手伝いします。</p>
+          <div className="grid md:gap-4 mt-10 md:grid-cols-3 my-12">
           {siteConfig.works.map((item, index) => (
             <button key={index} className="flex justify-center" onClick={() => {Toggle(); setTitle(item.title); setIndex(index);}}>
               <div className="rounded overflow-hidden bg-slate-50 shadow w-full my-4 relative transition hover:bottom-2 hover:right-2 hover:shadow-2xl hover:bg-blue-300 hover:text-white md:my-0 content-between grid md:gap-6" >
@@ -68,7 +68,7 @@ const P_works = () => {
     <div>   
       <div className={`w-full h-screen overflow-hidden flex flex-col ${modal && 'hidden'}`}>
         <h2 className="text-4xl mt-20 mb-8 md:mb-28 mx-auto">Works & Services</h2>
-        <p className="text-xl">私のこれまでの制作物とその経験に裏付けされたサービスを紹介します。</p>
+        <p className="text-xl">各種Webサービスにおける課題解決をお手伝いします。</p>
         <div>
           <Splide 
             options={ {

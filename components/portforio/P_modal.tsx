@@ -14,7 +14,7 @@ const P_modal: FC<ModalProps> = ({ show, index, close }) => {
         </button>
         <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
-            <div className="max-w-xl mb-6">
+            <div className="max-w-xl mb-2">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               {siteConfig.works[index].title}
               </h2>
@@ -53,7 +53,7 @@ const P_modal: FC<ModalProps> = ({ show, index, close }) => {
                 Article</a></div>}
             </div>
           </div>
-          <div>
+          <div className="hidden sm:block">
             <Image
               className="static w-full h-auto"
               src={`/work${index+1}.png`}

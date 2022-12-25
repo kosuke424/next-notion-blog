@@ -67,7 +67,7 @@ const P_works = () => {
   return(
     <div>   
       <div className={`w-full h-screen overflow-hidden flex flex-col ${modal && 'hidden'}`}>
-        <h2 className="text-4xl mt-40 mb-8 md:mb-28 mx-auto">Works & Services</h2>
+        <h2 className="text-4xl mt-20 mb-8 md:mb-28 mx-auto">Works & Services</h2>
         <p className="text-xl">私のこれまでの制作物とその経験に裏付けされたサービスを紹介します。</p>
         <div>
           <Splide 
